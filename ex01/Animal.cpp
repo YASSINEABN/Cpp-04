@@ -28,15 +28,16 @@ void Animal::makesoud() const
     std::cout << "im animal" << std::endl ;
 }
 
-Animal::Animal(Animal &obj) : type(obj.type)
+Animal::Animal(const Animal &obj) 
 {
+    *this = obj;
     std::cout << "copy constructor is called " << std::endl;
 }
-Animal &Animal::operator=(Animal &animal)
+Animal &Animal::operator=(const Animal &animal)
 {
     if (this != &animal)
     {
-        this->type = animal.get_type();
+        this->type = animal.type;
     }
     return *this;
 }
