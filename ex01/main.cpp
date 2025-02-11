@@ -1,7 +1,6 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include <crtdbg.h>
 
 #define _CRTDBG_MAP_ALLOC
 
@@ -26,6 +25,5 @@ int	main(void)
 	}
 	Dog	a;
 	Dog	b(a);
-	 _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG); 
-    _CrtDumpMemoryLeaks();
+	
 }

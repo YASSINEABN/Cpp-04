@@ -18,6 +18,7 @@ void Cat::makesound()
 
 Cat::~Cat()
 {
+        delete this->brain;
     std::cout << "destructor for Cat is called " << std::endl;
 }
 

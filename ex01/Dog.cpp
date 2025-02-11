@@ -18,6 +18,7 @@ void Dog::makesound()
 
 Dog::~Dog()
 {
+    delete this->brain;
     std::cout << "destructor for Dog is called " << std::endl;
 }
 
