@@ -14,7 +14,7 @@ void Animal::set_type(const std::string &value)
 {
     this->type = value;
 }
-std::string Animal::get_type()
+std::string const &Animal::get_type()
 {
     return this->type;
 }
@@ -28,15 +28,15 @@ void Animal::makesoud() const
     std::cout << "im animal" << std::endl ;
 }
 
-Animal::Animal(Animal &obj) : type(obj.type)
+Animal::Animal(const Animal &obj) : type(obj.type)
 {
     std::cout << "copy constructor is called " << std::endl;
 }
-Animal &Animal::operator=(Animal &animal)
+Animal &Animal::operator=(const Animal &animal)
 {
     if (this != &animal)
     {
-        this->type = animal.get_type();
+        this->type = animal.type;
     }
     return *this;
 }

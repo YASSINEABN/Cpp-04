@@ -36,11 +36,6 @@ Dog &Dog::operator=( const Dog &obj)
     return *this;
 }
 
-Brain Dog::get_brain()
-{
-    return *this->brain;
-}
-
 void Dog::set_Brain( const Brain& obj)
 {
     *this->brain = obj;

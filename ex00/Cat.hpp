@@ -8,10 +8,10 @@ class Cat :public Animal
 public:
      Cat  ();
      Cat(std::string type);
-     Cat( Cat &obj);
+     Cat(const Cat &obj);
     ~Cat ();
-    void makesound();
-    Cat &operator=( Cat &obj);
+    void makesoud() const;
+    Cat &operator=( const Cat &obj);
 };
 
 

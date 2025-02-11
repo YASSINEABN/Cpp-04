@@ -14,7 +14,6 @@ public:
     ~Dog ();
     void makesound();
     Dog &operator=( const Dog &obj);
-    Brain get_brain();
     void set_Brain(const Brain& obj);
     Brain &getBrain(void) const;
     };

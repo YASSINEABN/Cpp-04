@@ -8,10 +8,10 @@ class Dog :public Animal
 public:
      Dog  ();
      Dog(std::string type);
-     Dog( Dog &obj);
+     Dog( const Dog &obj);
     ~Dog ();
-    void makesound();
-    Dog &operator=( Dog &obj);
+        void makesoud() const;
+    Dog &operator=( const Dog &obj);
 };
 
 

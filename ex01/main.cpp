@@ -2,13 +2,12 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-#define _CRTDBG_MAP_ALLOC
 
 int	main(void)
 {
-	const Animal	*animals[10];
+	 Animal	*animals[10];
 	int				i;
-
+	
 	i = 0;
 	while (i < 10)
 	{
@@ -20,6 +19,7 @@ int	main(void)
 	}
 	while (i)
 	{
+		std::cout << animals[10-i]->get_type() << std::endl;
 		delete animals[10 - i];
 		i--;
 	}
